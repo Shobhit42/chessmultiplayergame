@@ -1,59 +1,46 @@
-
 html {
     box-sizing: border-box;
   }
 
+.container{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
 body {
     position: relative;
-    background-image: linear-gradient(180deg, #7486eb, #cde5ac);
     display: flex;
     justify-content: center;
+    background-color: #f6f6f5;
+    font-family: Arial, sans-serif;
 }
-
-.blink{
+.blink {
     padding: 10px;
     border-radius: 10px;
     animation: blink 0.5s infinite;
-    color: rgb(215, 42, 42);
-    }
-    @keyframes blink{
-        0% {
-            background: rgb(215, 42, 42);
-            color: rgb(29, 244, 208);
-        }
-        50% {
-            background: rgb(29, 244, 208);
-            color: rgb(215, 42, 42);;
-        }
+    color: rgb(0, 0, 0);
 }
 
 .createGameLabel {
-    margin-top: 40px;
-    padding: 10px;
+    margin-top: 5px;
     font: 15px;
-    border-radius: 10px;
-    background: rgb(103, 84, 225);
     width: 250px;
-    color: white;
+    color: black;
+    font-weight: bold;
 }
 
 .joinGameLabel {
-    padding: 10px;
     font: 15px;
     border-radius: 10px;
-    background: rgb(103, 84, 225);
-    width: 200px;
-    color: white;
+    font-weight: bold;
+    color: black;
 }
 
 #roomSetup {
-    border-radius: 50px;
-    padding-top: 15px;
+    border-radius: 10px;
+    padding-top: 5px;
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 60px;
-    border-style: solid;
-    background-image: linear-gradient(180deg, #fadfbb, #dfac47);
+    padding-bottom: 10px;
+    background-color: #ffffff;
 }
 
 .roomButton {
@@ -64,77 +51,124 @@ body {
 }
 
 .inputLabel {
-    background: rgb(103, 84, 225);
-    border-radius: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 110px;
-    color: white;
+    color: black;
 }
 
 .sliderLabel {
-    background: rgb(103, 84, 225);
-    border-radius: 15px;
-    width: 550px;
     padding: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+}
+
+.inputLabel {
+    margin-bottom: 5px;
 }
 
 .input-box {
-    background-color: rgb(255, 179, 0);
-    margin-left: 10px;
-    border-radius: 10px;
-    color:white;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.roomButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.roomButton:hover {
+    background-color: #0056b3;
 }
 
 #roombanner {
     position: absolute;
-    border-radius: 25px;
+    border-radius: 5px;
     margin-top: 25px;
-    background-image: linear-gradient(180deg, #eb748e, #dfbb6f);
-    border-style: solid;
     padding: 5px;
-    border-width: 4px;
 }
 
 #createGame {
-    border-radius: 30px;
-    padding: 30px;
-    background-color: rgb(163, 57, 8);
+        /* border-radius: 30px; */
+    /* padding: 10px; */
     color: white;
-    padding-top: 15px;
-    padding-left: 30px;
+    /* padding-top: 15px; */
+    /* padding-left: 30px; */
 }
 
 #joinGame {
-    border-radius: 30px;
-    padding: 30px;
-    background-color: rgb(163, 57, 8);
+  
+
     color: white;
-    padding-top: 30px;
-    padding-left: 30px;
+}
+
+.GameVerse{
+    color: rgb(26, 151, 57);
+    justify-content: end;
+    padding-right: 10px;
+    align-items: center;
+    font-size: large;
+    padding-top: 5px;
+    font-family: sans-serif;
+}
+
+.slidecontainer {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .slider {
-    margin-top: 20px;
-    background-color: white;
-    width: 400px;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
 }
 
 #whotoplay {
     position: absolute;
-    border-radius: 25px;
+    border-radius: 5px;
     margin-top: 90px;
     padding: 5px;
-    background-color: orange;
-    border-style: solid;
-    border-width: 4px;
 }
 
 .container {
-    margin-top: 150px;
+    margin-top: 5px;
 }
 
 #restartButton {
@@ -157,6 +191,8 @@ body {
     grid-template-columns: repeat(8, 1fr);
 }
 
+
+
 .chessboard > * {
     border-style: solid;
     border-width: 1px;
@@ -176,6 +212,22 @@ body {
     background-color: #babcb4;
 }
 
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputLabel {
+    margin-bottom: 5px;
+}
+
 #blacktimer {
     font-size: 45px;
     padding: 3px;
@@ -185,6 +237,52 @@ body {
     border-style: solid;
     border-width: 4px;
     background-color: #babcb4;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    background-color: #f6f6f5;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Ensure full height */
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    max-width: 600px; /* Limit width for better readability */
+}
+
+h1, h2 {
+    text-align: center; /* Center headings */
+}
+
+/* Add more styling as needed */
+
+/* Your existing CSS */
+/* ... */
+
+/* Chessboard */
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin: 20px auto; /* Center horizontally */
+}
+
+.chessboard > * {
+    border-style: solid;
+    border-width: 1px;
+    width: 50px;
+    height: 50px;
 }
 
 div.b_bishop {
